@@ -1,0 +1,179 @@
+/* Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* General */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Times New Roman', Times, serif;
+  width: 100%;
+  height: 100vh;
+  border: 1px solid #8a8a8a;
+  background-color: #090909;
+}
+
+/* Chat */
+.contenedor {
+  width: 20rem;
+  padding: 0.5rem;
+  border-radius: 0.8rem;
+  background: #eee;
+}
+
+.pantalla {
+  overflow-y: auto;
+  width: 100%;
+  height: 22rem;
+  padding: 0.8rem;
+  border-radius: 0.8rem;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+}
+
+.msjBot,
+.msjUser {
+  position: relative;
+  text-wrap: balance;
+  margin: 0.5rem 0;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  border: 1px solid #00000022;
+}
+
+.msjBot {
+  font-weight: bold;
+  text-align: left;
+  color: #000;
+  background-color: #ffffff00;
+}
+
+.msjUser {
+  font-weight: bold;
+  text-align: right;
+  color: #fff;
+  background-color: #000000ff;
+}
+
+.enviarMjs {
+  margin: 0.5rem 0;
+}
+
+.enviar {
+  border: none;
+  width: 75%;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  background-color: transparent;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+}
+
+.enviar:focus {
+  outline: none;
+  font-weight: bold;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  transition: all 0.3s ease;
+  width: 23%;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  color: #000;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+}
+
+button:hover {
+  background: #000;
+  color: #fff;
+}
+
+/* Estilos simples para el modal */
+.modalContenedor {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100dvh;
+  z-index: 100;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal {
+  text-align: center;
+  text-wrap: balance;
+  padding: 1.5rem;
+  margin: 0 0.5rem;
+  border-radius: 0.8rem;
+  background: #eee;
+}
+
+#modalInput {
+  outline: none;
+  text-align: center;
+  width: 100%;
+  margin: 0.5rem 0;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  border: 1px solid transparent;
+}
+
+#modalInput:focus {
+  font-weight: bold;
+  border: 1px solid #ccc;
+}
+
+#modalBtn {
+  cursor: pointer;
+  border: none;
+  transition: all 0.3s ease;
+  width: 100%;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  color: #000;
+  background-color: #ffffff00;
+}
+
+#modalBtn:hover {
+  color: #fff;
+  background-color: #000000ff;
+}
+
+/* Media Queries */
+@media screen and (max-width: 600px) {
+  .contenedor {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    height: 100vh;
+    border-radius: 0px;
+  }
+
+  .pantalla {
+    overflow-y: scroll;
+    height: 100%;
+  }
+
+  .enviar {
+    margin: 5px auto;
+    text-align: center;
+    width: 100%;
+  }
+
+  button {
+    width: 100%;
+  }
+
+  .enviarMsj {
+    display: flex;
+    flex-direction: column;
+  }
+}
