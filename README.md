@@ -1,42 +1,37 @@
-# 🌍 Rest Countries App - Frontend Mentor Challenge
+# 🤖 Chat Bot | B14S
 
-Este proyecto es una solución al reto de Frontend Mentor: **REST Countries API with color theme switcher**.  
-La aplicación permite explorar información de todos los países usando la REST Countries API, con opciones de búsqueda, filtro por región y cambio de tema claro/oscuro.
+**Chat Bot | B14S** es un proyecto de chatbot personalizado inspirado en ChatGPT, desarrollado con JavaScript, HTML y TensorFlow.js. Usa el modelo Universal Sentence Encoder para interpretar preguntas y brindar respuestas desde una base de conocimiento local.
 
 ---
 
 ## 📌 Descripción
 
-La app muestra una lista de países con su bandera, nombre, población, región y capital.  
-Incluye:
-- Búsqueda dinámica por nombre
-- Filtro por región
-- Cambio de tema (modo claro / modo oscuro)
-- Diseño responsivo
+El objetivo de este chatbot es simular una conversación natural usando procesamiento de lenguaje natural (NLP) en el navegador.  
+No depende de servidores externos, ya que todo se ejecuta del lado del cliente con ayuda de TensorFlow.js y modelos precargados.
 
-El proyecto fue desarrollado usando Tailwind CSS para el diseño, jQuery para manipulación DOM y animaciones, y la API pública [restcountries.com](https://restcountries.com).
+Ideal para practicar IA en el navegador y crear asistentes personalizados que no requieran backend.
 
 ---
 
 ## 🧩 Tecnologías utilizadas
 
 - HTML5 semántico  
-- Tailwind CSS  
-- JavaScript  
-- jQuery  
-- API REST (RestCountries)  
-- Responsive Design (Mobile First)  
-- Favicon e íconos en SVG  
+- JavaScript (ES Modules)  
+- TensorFlow.js  
+- Universal Sentence Encoder  
+- Diseño adaptable  
+- Almacenamiento local para memoria del chat  
+- SEO básico y favicon personalizado
 
 ---
 
 ## 🧭 Estructura del sitio
 
-- **Header**: nombre del sitio y botón para cambiar entre light y dark mode  
-- **Search bar**: para buscar países por nombre  
-- **Dropdown de regiones**: filtro por continente  
-- **Cards**: con datos relevantes de cada país  
-- **Modo Oscuro**: cambia estilos dinámicamente
+- **`index.html`**: punto de entrada, carga del chatbot.  
+- **`src/main.js`**: manejo del DOM, eventos de usuario, renderizado.  
+- **`src/inteligencia.js`**: lógica de IA, comparación de frases y respuestas.  
+- **Modelo USE**: importado desde CDN para análisis semántico.  
+- **Memoria**: almacenamiento local (localStorage) para recordar el historial de conversación.
 
 ---
 
@@ -45,26 +40,21 @@ El proyecto fue desarrollado usando Tailwind CSS para el diseño, jQuery para ma
 ```bash
 .
 ├── index.html
-├── Js/
-│   └── script.js
-├── css/
-│   └── output.css
-├── assets/
-│   ├── img/
-│   │   └── favicon-32x32.png
-│   └── svg/
-│       └── moon.svg
+├── public/
+│   └── icono.ico
+├── src/
+│   ├── main.js
+│   └── inteligencia.js
 ```
 
 ---
 
 ## 🛠️ En desarrollo
 
-- [ ] Vista individual de país (detalle completo)  
-- [ ] Animaciones suaves al cambiar de tema  
-- [ ] Guardar modo preferido en localStorage  
-- [ ] Accesibilidad con ARIA y navegación con teclado  
-- [ ] Traducción de textos al español/inglés
+- [ ] Mejorar precisión del análisis semántico  
+- [ ] Agregar interfaz de entrenamiento personalizado  
+- [ ] Crear una versión en español 100% entrenada  
+- [ ] Estilos con Tailwind o CSS modular
 
 ---
 
@@ -82,6 +72,4 @@ El proyecto fue desarrollado usando Tailwind CSS para el diseño, jQuery para ma
 
 ## 🌍 Demo en línea
 
-🟢 [restcountriesb14s.netlify.app](https://restcountriesb14s.netlify.app)
-
-¿Te gustaría que la vista individual tenga un diseño tipo modal o una página nueva? 🌐
+🟢 Disponible en [chatbotb14s.netlify.app](https://chatbotb14s.netlify.app)
